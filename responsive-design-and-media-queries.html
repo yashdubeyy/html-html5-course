@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design and Media Queries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+
+        /* Default styles for larger screens */
+        .box {
+            width: 50%;
+            margin: 10px;
+            padding: 20px;
+            background-color: lightblue;
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .box {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Design with Media Queries</h1>
+        <div class="box">This is a responsive box.</div>
+    </div>
+</body>
+</html>
