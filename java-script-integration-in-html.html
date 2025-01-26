@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Integration in HTML</title>
+
+    <!-- Internal JavaScript -->
+    <script>
+        function displayMessage() {
+            alert("Hello, welcome to JavaScript integration in HTML!");
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>JavaScript Integration in HTML</h1>
+        <p>This example demonstrates different ways of integrating JavaScript into an HTML document.</p>
+
+        <!-- Inline JavaScript -->
+        <button onclick="alert('This is an inline JavaScript function')">Inline JavaScript</button>
+
+        <!-- Button to trigger the internal JavaScript function -->
+        <button onclick="displayMessage()">Click Me for Internal JS</button>
+        
+        <h2>External JavaScript Example</h2>
+        <p>Check the external script for additional functionality.</p>
+        
+        <p>When you click the button below, an external JavaScript file will be loaded.</p>
+        <button id="externalJsBtn">Load External JS Example</button>
+    </div>
+
+    <!-- External JavaScript File -->
+    <script>
+document.getElementById('externalJsBtn').addEventListener('click', function() {
+    alert("You clicked the button to load external JavaScript!");
+});
+
+    </script>
+</body>
+</html>
