@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs and Web Storage in HTML5</title>
+</head>
+<body>
+    <h1>APIs and Web Storage in HTML5</h1>
+    <p>HTML5 introduced powerful new APIs for web applications, including Web Storage and Geolocation.</p>
+
+    <h2>Web Storage</h2>
+    <p>Web Storage allows web applications to store data locally on a user's browser.</p>
+    <pre>
+    // Example of using localStorage
+    localStorage.setItem("username", "John Doe");
+    let user = localStorage.getItem("username");
+    console.log(user);  // Output: John Doe
+    </pre>
+
+    <h2>Geolocation API</h2>
+    <p>The Geolocation API allows web apps to access the user's geographic location.</p>
+    <pre>
+    navigator.geolocation.getCurrentPosition(function(position) {
+        console.log(position.coords.latitude, position.coords.longitude);
+    });
+    </pre>
+</body>
+</html>
