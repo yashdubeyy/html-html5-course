@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Geolocation API</title>
+</head>
+<body>
+    <h1>HTML5 Geolocation API</h1>
+
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            document.getElementById("location").innerHTML = `Latitude: ${latitude} <br>Longitude: ${longitude}`;
+        }
+    </script>
+</body>
+</html>
