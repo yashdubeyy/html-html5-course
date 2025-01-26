@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Local Storage and Session Storage</title>
+</head>
+<body>
+    <h1>HTML5 Local Storage and Session Storage</h1>
+
+    <h2>Local Storage Example:</h2>
+    <input type="text" id="localStorageInput" placeholder="Enter some text">
+    <button onclick="saveToLocalStorage()">Save to Local Storage</button>
+    <p id="localStorageResult"></p>
+
+    <h2>Session Storage Example:</h2>
+    <input type="text" id="sessionStorageInput" placeholder="Enter some text">
+    <button onclick="saveToSessionStorage()">Save to Session Storage</button>
+    <p id="sessionStorageResult"></p>
+
+    <script>
+        // Local Storage Functions
+        function saveToLocalStorage() {
+            const input = document.getElementById('localStorageInput').value;
+            localStorage.setItem('localStorageData', input);
+            displayLocalStorage();
+        }
+
+        function displayLocalStorage() {
+            const storedData = localStorage.getItem('localStorageData');
+            document.getElementById('localStorageResult').innerText = "Local Storage Data: " + storedData;
+        }
+
+        // Session Storage Functions
+        function saveToSessionStorage() {
+            const input = document.getElementById('sessionStorageInput').value;
+            sessionStorage.setItem('sessionStorageData', input);
+            displaySessionStorage();
+        }
+
+        function displaySessionStorage() {
+            const storedData = sessionStorage.getItem('sessionStorageData');
+            document.getElementById('sessionStorageResult').innerText = "Session Storage Data: " + storedData;
+        }
+    </script>
+</body>
+</html>
