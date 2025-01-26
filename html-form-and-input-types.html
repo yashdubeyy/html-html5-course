@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Forms and Input Types</title>
+</head>
+<body>
+    <h1>HTML5 Forms and Input Types</h1>
+    
+    <form action="/submit" method="POST">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Your Name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Your Email" required><br><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required><br><br>
+
+        <label for="age">Age:</label><br>
+        <input type="number" id="age" name="age" min="18" max="100" required><br><br>
+
+        <label for="date">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br><br>
+
+        <label for="file">Upload Resume:</label><br>
+        <input type="file" id="file" name="file"><br><br>
+
+        <label for="bio">Biography:</label><br>
+        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Write something about yourself..."></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
